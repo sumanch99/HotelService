@@ -23,7 +23,6 @@ public class CartController {
 	
 	public static Map<Integer,MenuItem> cart = new HashMap<>();
 	
-	
 	@PostMapping("/{id}")
 	public ResponseEntity<Object> addToCartViaPost(@PathVariable("id") int id) {
 		if(!MenuItemController.menuItemList.containsKey(id)) {
@@ -35,6 +34,7 @@ public class CartController {
 		return new ResponseEntity<>("MenuItem added to cart successfully", HttpStatus.CREATED);
 	}
 	
+
 	@PatchMapping("/")
 	public ResponseEntity<Object> addToCart(@RequestBody MenuItem m) {
 		
