@@ -24,7 +24,4 @@ public class Cart {
 		this.total = total;
 	}
 	
-	
-	
-	
 }
